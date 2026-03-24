@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IrieVision Updates</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2d;
+      --text: #eef2ff;
+      --muted: #a5b4d4;
+      --accent: #60a5fa;
+      --accent-dark: #3b82f6;
+      --border: #22304f;
+      --max: 700px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: linear-gradient(180deg, #020617 0%, #0b1020 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: var(--max);
+      background: rgba(18, 26, 45, 0.94);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.38);
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+    }
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .bullets {
+      margin: 24px 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    .bullets li { margin: 10px 0; }
+    form {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
+    }
+    input[type="email"] {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      background: #09101d;
+      color: var(--text);
+      padding: 16px 18px;
+      font-size: 1rem;
+    }
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 15px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      background: var(--accent);
+      color: #082f49;
+      cursor: pointer;
+    }
+    button:hover { background: var(--accent-dark); color: #e0f2fe; }
+    .fineprint {
+      margin-top: 12px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">IrieVision</div>
+    <h1>Stay connected off Twitch.</h1>
+    <p>
+      Join the IrieVision email list for stream updates, VODs, short-clips,
+      worthwhile drops, and key updates worth not missing.
+    </p>
+
+    <ul class="bullets">
+      <li>Stream updates without relying only on Twitch notifications</li>
+      <li>VODs, short-clips, and worthwhile drops in one place</li>
+      <li>Simple unsubscribe if it stops being useful</li>
+    </ul>
+
+    <form action="https://buttondown.com/api/emails/embed-subscribe/Vaporware" method="post">
+      <label for="bd-email" class="fineprint">Email address</label>
+      <input id="bd-email" type="email" name="email" placeholder="you@example.com" required />
+      <button type="submit">Join the list</button>
+    </form>
+
+    <div class="fineprint">
+      By subscribing, you agree to receive IrieVision email updates about streams, VODs, short-clips, worthwhile drops, and occasional creator updates. No spam. Unsubscribe anytime.
+    </div>
+  </main>
+</body>
+</html>
